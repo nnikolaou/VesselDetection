@@ -4,6 +4,8 @@ Code for training & evaluating a simple Vessel Detector CNN.
 Includes code for balancing the training data, for augmenting the training data or adding noise, training the CNN in Keras, test set evaluation using various evaluation measures, calibration of probability estimates or threshold manipulation and various visualisations (filters, intermediate activations, Grad-CAM heat maps).
 
 ## Requirements
+In its current form, the notebook requires being in the same folder with the "Chips" folder containing 2 subfolders: "vessels" & "nonvessels", each with the examples of the corresponding class.
+
 The main code has been tested with the following packages: Scikit-learn 0.22, TensorFlow 2.0.0 & Keras 2.2.4-tf
 
 The additional code for the visualization of the CNN filters & Grad-CAM heatmaps requires TensorFlow 1.10.0 & Keras 2.2.2
@@ -27,4 +29,4 @@ For faster training, use a learning rate of 10e-4,  early stopping with a patien
 
 In the current version, calibration / threshold shifting do not provide tangible benefits. Calibration with the proper Scikit-learn function requires that the model be trained using a Scikit-learn wrapper for Keras (i.e. training option 2).
 
-All visualizations can be performed with loaded models trained on the same dataset.
+All visualizations can be performed with loaded models trained on the same dataset. Currently no saved models are in the project's GitHub page due to size limitations but you can easily store/load them in your local copy.
