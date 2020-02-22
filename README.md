@@ -1,7 +1,7 @@
 # Vessel Detection from Satelite Images
 Code for training & evaluating a simple Vessel Detector CNN.
 
-Includes code for balancing the training data, for augmenting the training data or adding noise, training the CNN in Keras, test set evaluation using various evaluation measures, calibration of probability estimates or threshold manipulation and various visualisations (filters, intermediate activations, Grad-CAM heat maps).
+Includes code for balancing the training data, for augmenting the training data or adding noise, training the CNN in TensorFlow-Keras, test set evaluation using various evaluation measures, calibration of probability estimates or threshold manipulation and various visualisations (filters, intermediate activations, Grad-CAM heat maps).
 
 ## Requirements
 In its current form, the notebook requires being in the same folder with the "Chips" folder containing 2 subfolders: "vessels" & "nonvessels", each with the examples of the corresponding class.
