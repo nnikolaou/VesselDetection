@@ -23,6 +23,10 @@ The additional code for the visualization of the CNN filters & Grad-CAM heatmaps
 
 The notebook itself and the code within it contain all necessary documentation.
 
+"Vessel Detection.py": repeats n_runs times a train-(optionally validation)-test split of the data, training and evaluating of the CNN. It saves all keras models produced and prints various evaluation measures (average & standard error* accross all runs).
+
+*standard error = standard deviation / sqrt(n_runs) 
+
 ## Suggested settings
 
 The CNN architecture & hyperparameter setup in the notebook were the optimal found during hyperparameter optimisation; the default values in the notebook are guaranteed to produce a model with good predictive performance.
