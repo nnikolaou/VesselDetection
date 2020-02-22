@@ -1,5 +1,7 @@
 # Vessel Detection from Satelite Images
-Code for training & evaluating a simple Vessel Detector CNN. Includes code for balancing the training data, for augmenting the training data or adding noise, training the CNN in Keras, test set evaluation using various evaluation measures, calibration of probability estimates or threshold manipulation and various visualisations (filters, intermediate activations, Grad-CAM heat maps).
+Code for training & evaluating a simple Vessel Detector CNN.
+
+Includes code for balancing the training data, for augmenting the training data or adding noise, training the CNN in Keras, test set evaluation using various evaluation measures, calibration of probability estimates or threshold manipulation and various visualisations (filters, intermediate activations, Grad-CAM heat maps).
 
 ## Requirements
 The main code has been tested with the following packages: Scikit-learn 0.22, TensorFlow 2.0.0 & Keras 2.2.4-tf
