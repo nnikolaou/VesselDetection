@@ -11,9 +11,9 @@ The main code has been tested with the following packages: Scikit-learn 0.22, Te
 The additional code for the visualization of the CNN filters & Grad-CAM heatmaps requires TensorFlow 1.10.0 & Keras 2.2.2
 
 ## Description
-"Vessel Detection.ipynb" does only a training/test split & evaluates on test data.
+"Vessel Detection.ipynb" does only a training/test split & evaluates on test data. If all datapoints given are assumed to be used for training, use this. Default setup gets to ~ 90-92% Accuracy.
 
-"Vessel Detection-Val.ipynb" is the same notebook with an additional training/validation split.
+"Vessel Detection-Val.ipynb" is the same notebook with an additional training/validation split. If part of the dataset given is assumed to only be used for the final evaluation, use this. Default setup gets to ~ 86-87% Accuracy.
 
 "__Optional__" : indicates parts of the notebook that can be ommited, but if not, they will have an effect on cells further down (e.g. data preprocessing / augmentation).
 
