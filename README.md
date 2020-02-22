@@ -6,6 +6,7 @@ Includes code for balancing the training data, for augmenting the training data 
 ## Requirements
 ### Data:
 In their current form, the notebook & the script both require being in the same folder with the "Chips" folder containing 2 subfolders: "vessels" & "nonvessels", each with the examples of the corresponding class.
+
 ### Packages:
 The main code has been tested with the following packages: Scikit-learn 0.22, TensorFlow 2.0.0 & Keras 2.2.4-tf
 
@@ -13,20 +14,14 @@ The additional code for the visualization of the CNN filters & Grad-CAM heatmaps
 
 ## Description
 
-### Jupyter Notebook files:
-"Vessel Detection.ipynb" does only a training/test split & evaluates on test data. If all datapoints given are assumed to be used for training, use this. Default setup gets to ~ 90-92% Accuracy.
-
-"Vessel Detection-Val.ipynb" is the same notebook with an additional training/validation split. If part of the dataset given is assumed to only be used for the final evaluation, use this. Default setup gets to ~ 86-87% Accuracy.
-
-In the notebook:
+### Jupyter Notebook:
+"Vessel Detection.ipynb" provides options for all functionalities described in the introduction. The notebook itself and the code within it contain all necessary documentation.
 
 "Optional" (in bold): indicates parts of the notebook that can be ommited, but if not, they will have an effect on cells further down (e.g. data preprocessing / augmentation).
 
-"TODO" (in red): indicates parts of the notebook that are to be modified, finalized or added.
+"TODO": indicates parts of the notebook that are to be modified, finalized or added.
 
-"Visualization" (in blue) indicates parts of the notebook that is used only for visualization / printing of results, with no effect further down.
-
-The notebook itself and the code within it contain all necessary documentation.
+"Visualization": indicates parts of the notebook that is used only for visualization / printing of results, with no effect further down.
 
 ### Python Script:
 "Vessel Detection.py": repeats n_runs times a train/validation(optionally)/test split of the data, followed by training and evaluation of the CNN. It saves all Keras models produced and prints various evaluation measures (average & standard error* accross all runs).
@@ -36,7 +31,7 @@ The notebook itself and the code within it contain all necessary documentation.
 ## Suggested settings
 
 ### Hyperparameters
-The CNN architecture & hyperparameter setup in the notebook were the optimal found during hyperparameter optimisation; the default values in the notebook are guaranteed to produce a model with good predictive performance.
+The CNN architecture & hyperparameter setup in the notebook & script were the optimal found during hyperparameter optimisation; the default values in the notebook are guaranteed to produce a model with good predictive performance.
 
 ### Data preprocessing 
 It is suggested to rebalance the training set, but not to use data augmentation via transformations or add Gaussian noise (these can improve performance of the resulting models but have not been tested fully).
@@ -44,7 +39,7 @@ It is suggested to rebalance the training set, but not to use data augmentation 
 ### Train/Test vs. Train/Validation/Test split
 Best results are obtained w/o a validation split (run "Vessel Detection.ipynb"; the default hyperparameters were optimised in advance using one).
 
-If all datapoints in "Chips" are assumed to be used for training and a separate test set is provided, use this the Train/Test split.  If part of the dataset given is assumed to only be used for the final evaluation use a Train/Validation/Test split.
+If all datapoints in "Chips" are assumed to be used for training and a separate test set is provided, use this the Train/Test split. Default setup gets to ~ 90-92% Accuracy. If part of the dataset given is assumed to only be used for the final evaluation use a Train/Validation/Test split. Default setup gets to ~ 86-87% Accuracy.
 
 ### Fast training vs. best results
 For faster training, use a learning rate of 10e-4,  early stopping with a patience of 10 epochs and a total of 50; for best results, use a learning rate of 10e-5 and early stopping with a patience of 20 and a total of 100 epochs.
