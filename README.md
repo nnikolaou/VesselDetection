@@ -11,11 +11,17 @@ The main code has been tested with the following packages: Scikit-learn 0.22, Te
 The additional code for the visualization of the CNN filters & Grad-CAM heatmaps requires TensorFlow 1.10.0 & Keras 2.2.2
 
 ## Description
-"__Optional__" : indicates parts of the notebook that can be ommited, but if not it will have an effect on cells further down
+"Vessel Detection.ipynb" does only a training/test split & evaluates on test data.
 
-"TODO" (in red): indicates parts of the notebook that are to be modified, finalized or added
+"Vessel Detection-Val.ipynb" is the same notebook with an additional training/validation split.
 
-"Visualization" (in blue) indicates parts of the notebook that is used only for visualization / printing of results, with no effect further down
+"__Optional__" : indicates parts of the notebook that can be ommited, but if not, they will have an effect on cells further down (e.g. data preprocessing / augmentation).
+
+"TODO" (in red): indicates parts of the notebook that are to be modified, finalized or added.
+
+"Visualization" (in blue) indicates parts of the notebook that is used only for visualization / printing of results, with no effect further down.
+
+The notebook itself and the code within it contain all necessary documentation.
 
 ## Suggested settings
 
