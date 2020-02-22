@@ -15,7 +15,8 @@ The additional code for the visualization of the CNN filters & Grad-CAM heatmaps
 
 "Vessel Detection-Val.ipynb" is the same notebook with an additional training/validation split. If part of the dataset given is assumed to only be used for the final evaluation, use this. Default setup gets to ~ 86-87% Accuracy.
 
-"__Optional__" : indicates parts of the notebook that can be ommited, but if not, they will have an effect on cells further down (e.g. data preprocessing / augmentation).
+In the notebooks:
+"Optional" (in bold): indicates parts of the notebook that can be ommited, but if not, they will have an effect on cells further down (e.g. data preprocessing / augmentation).
 
 "TODO" (in red): indicates parts of the notebook that are to be modified, finalized or added.
 
