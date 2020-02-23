@@ -53,31 +53,44 @@ All visualizations can be performed with loaded models trained on the same datas
 ## Sample Results
 
 ### Train/Validation/Test split - no augmentation - upsampling minority class - no noise added
-Performing 5 random train/validation/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce run "Vessel Detection.py" w/o changes):&nbsp;
+Performing 5 random train/validation/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce run "Vessel Detection.py" w/o changes):
 
-Test set results (average +/- standard error) across all 5 runs:&nbsp;
-  
--------Confusion matrix:-------&nbsp;
-TP: [331.200]+/-[2.143]   (Higher better)&nbsp; 
-TN: [168.400]+/-[1.951]   (Higher better)&nbsp;
-FP: [35.000]+/-[1.414]    (Lower better)&nbsp;
-FN: [34.400]+/-[1.951]    (Lower better)&nbsp;
+Test set results (average +/- standard error) across all 5 runs:
+
+-------Confusion matrix:-------
+
+TP: [331.200]+/-[2.143]   (Higher better)
+ 
+TN: [168.400]+/-[1.951]   (Higher better)
+
+FP: [35.000]+/-[1.414]    (Lower better)
+
+FN: [34.400]+/-[1.951]    (Lower better)
 
 -------Asymmetry:-------
-Expected Accuracy: [0.541]+/-[0.002], i.e. of a classifier randomly assigning&nbsp;
-examples to the 2 classes (deviation from 0.5 indicates class imbalance)&nbsp;
 
--------Classification evaluation measures:-------&nbsp;
-Accuracy: [0.878]+/-[0.002]             		     (Higher better)&nbsp;
-Recall: [0.906]+/-[0.005]               		     (Higher better)&nbsp;
-Precision: [0.904]+/-[0.004]            		     (Higher better)&nbsp;
-F1-score: [0.905]+/-[0.002]             		     (Higher better)&nbsp;
-Jaccard Index: [0.827]+/-[0.003]        		     (Higher better)&nbsp;
-Cohen's Kappa: [0.734]+/-[0.004].                (Higher better)&nbsp;
-AUC (using class predictions): [0.867]+/-[0.002] (Higher better)&nbsp;
-AUC (using scores): [0.944]+/-[0.004]            (Higher better)&nbsp;
-  
--------Probability estimation evaluation:-------&nbsp;
-Brier Score: [0.088]+/-[0.002]  (Lower better)&nbsp;
-  
+Expected Accuracy: [0.541]+/-[0.002], i.e. of a classifier randomly assigning examples to the 2 classes (deviation from 0.5 indicates class imbalance)
+
+-------Classification evaluation measures:-------
+
+Accuracy: [0.878]+/-[0.002]             		     (Higher better)
+
+Recall: [0.906]+/-[0.005]               		     (Higher better)
+
+Precision: [0.904]+/-[0.004]            		     (Higher better)
+
+F1-score: [0.905]+/-[0.002]             		     (Higher better)
+
+Jaccard Index: [0.827]+/-[0.003]        		     (Higher better)
+
+Cohen's Kappa: [0.734]+/-[0.004].                (Higher better)
+
+AUC (using class predictions): [0.867]+/-[0.002] (Higher better)
+
+AUC (using scores): [0.944]+/-[0.004]            (Higher better)
+
+-------Probability estimation evaluation:-------
+
+Brier Score: [0.088]+/-[0.002]  (Lower better)
+
 Epochs Trained: 52.800 +/- 6.508
