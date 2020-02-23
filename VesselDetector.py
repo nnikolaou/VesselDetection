@@ -73,7 +73,7 @@ AUC_scores = np.zeros((n_runs, 1))
 brier_score = np.zeros((n_runs, 1))
 
 for run in range(n_runs):
-    print("Training model "+str(run)+" of "+str(n_runs)+".")
+    print("Training model "+str(run+1)+" of "+str(n_runs)+".")
     #Split to train (80%) and test (20%) sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     
@@ -173,22 +173,22 @@ for run in range(n_runs):
     
     #Save model after training
     if include_validation == 1: 
-        model.save('VesselDetectorVal'+str(run)+'of'+str(n_runs)+'.h5')
+        model.save('VesselDetectorVal'+str(run+1)+'of'+str(n_runs)+'.h5')
     else:
-        model.save('VesselDetector'+str(run)+'of'+str(n_runs)+'.h5')
+        model.save('VesselDetector'+str(run+1)+'of'+str(n_runs)+'.h5')
     
     # Plot validation & training accuracy per epoch:
     plt.figure()
     plt.plot(epochs, acc, color = 'blue', linestyle='-.', label='Training acc')
     plt.plot(epochs, val_acc, color = 'red', linestyle='-', label='Validation acc')
-    plt.title('Training and validation accuracy of model '+str(run)+' of '+str(n_runs))
+    plt.title('Training and validation accuracy of model '+str(run+1)+' of '+str(n_runs))
     plt.legend()
        
     #Plot validation & training loss per epoch:
     plt.figure()
     plt.plot(epochs, loss, 'blue', linestyle='-.', label='Training loss')
     plt.plot(epochs, val_loss, 'red',  linestyle='-', label='Validation loss')
-    plt.title('Training and validation loss of model '+str(run)+' of '+str(n_runs))
+    plt.title('Training and validation loss of model '+str(run+1)+' of '+str(n_runs))
     plt.legend()
     
     # Evaluation on test data
@@ -205,7 +205,7 @@ for run in range(n_runs):
     FN[run] = conf_mat[1][0]
       
     # Show confusion matrix:
-    print("Confusion matrix of model "+str(run)+" of "+str(n_runs))
+    print("Confusion matrix of model "+str(run+1)+" of "+str(n_runs))
     print(conf_mat)   
     
     #Compute accuracy, precision, recall, f1-score, Jaccard index & Cohen's Kappa:
