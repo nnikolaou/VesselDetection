@@ -39,7 +39,7 @@ It is suggested to rebalance the training set, but not to use data augmentation 
 ### Train/Test vs. Train/Validation/Test split
 Best results are obtained w/o a validation split (run "Vessel Detection.ipynb"; the default hyperparameters were optimised in advance using one).
 
-If all datapoints in "Chips" are assumed to be used for training and a separate test set is provided, use this the Train/Test split. Default setup gets to ~ 90-92% Accuracy. If part of the dataset given is assumed to only be used for the final evaluation use a Train/Validation/Test split. Default setup gets to ~ 86-87% Accuracy.
+If all datapoints in "Chips" are assumed to be used for training and a separate test set is provided, use this the Train/Test split. Default setup gets to ~ 91% Accuracy. If part of the dataset given is assumed to only be used for the final evaluation use a Train/Validation/Test split. Default setup gets to ~ 88% Accuracy.
 
 ### Fast training vs. best results
 For faster training, use a learning rate of 10e-4,  early stopping with a patience of 10 epochs and a total of 50; for best results, use a learning rate of 10e-5 and early stopping with a patience of 20 and a total of 100 epochs.
