@@ -53,7 +53,7 @@ All visualizations can be performed with loaded models trained on the same datas
 ## Sample Results
 
 ### Train/Validation/Test split - no augmentation - upsampling minority class - no noise added
-Performing 5 random train/validation/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce run "Vessel Detection.py" w/o changes):
+Performing 5 random train/validation/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce, run "Vessel Detection.py" w/o changes):
 
 Test set results (average +/- standard error) across all 5 runs:
 
