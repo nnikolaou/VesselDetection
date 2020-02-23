@@ -93,4 +93,6 @@ AUC (using scores): [0.944]+/-[0.004]            (Higher better)
 
 Brier Score: [0.088]+/-[0.002]  (Lower better)
 
+-------Epochs Traned:-------
+
 Epochs Trained: 52.800 +/- 6.508
