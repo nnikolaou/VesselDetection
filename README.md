@@ -51,7 +51,7 @@ All visualizations can be performed with loaded models trained on the same datas
 ## Sample Results
 
 ### Train/Validation/Test split - no augmentation - upsampling minority class - no noise added
-Performing 5 random train/validation/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce, run "Vessel Detection.py" w/o changes):
+Performing 5 random 60/20/20 train/validation/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce, run "Vessel Detection.py" w/o changes):
 
 Test set results (average +/- standard error) across all 5 runs:
 
@@ -94,3 +94,48 @@ Brier Score:  0.088 +/- 0.002   (Lower better)
 -------Epochs Traned:-------
 
 Epochs Trained: 52.800 +/- 6.508
+
+### Train/Test split - no augmentation - upsampling minority class - no noise added
+Performing 5 random 80/20 train/test splits, training a CNN with default parameters and evaluating on test set yielded the following results (to reproduce, run "Vessel Detection.py" w/o changes):
+
+Test set results (average +/- standard error) across all 5 runs:
+
+-------Confusion matrix:-------
+
+TP: 336.800 +/- 2.552   (Higher better)
+ 
+TN: 169.600 +/- 1.315   (Higher better)
+
+FP: 34.000 +/- 2.098    (Lower better)
+
+FN: 28.600 +/- 1.374    (Lower better)
+
+-------Asymmetry:-------
+
+Expected Accuracy: 0.543 +/- 0.002, i.e. Accuracy of a classifier randomly assigning examples to the 2 classes (deviation from 0.5 indicates class imbalance)
+
+-------Classification evaluation measures:-------
+
+Accuracy:  0.890 +/- 0.004              		      (Higher better)
+
+Recall:  0.922 +/- 0.004                		      (Higher better)
+
+Precision:  0.908 +/- 0.006             		      (Higher better)
+
+F1-score:  0.915 +/- 0.004              		      (Higher better)
+
+Jaccard Index:  0.843 +/- 0.006         		      (Higher better)
+
+Cohen's Kappa:  0.759 +/- 0.009                 (Higher better)
+
+AUC (using class predictions):  0.878 +/- 0.005 (Higher better)
+
+AUC (using scores):  0.946 +/- 0.002            (Higher better)
+
+-------Probability estimation evaluation:-------
+
+Brier Score:  0.081 +/- 0.003   (Lower better)
+
+-------Epochs Traned:-------
+
+Epochs Trained: 49.600 +/- 3.662
